@@ -2,32 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply w-full;
+}
+.container {
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background: url('/pattern.webp') no-repeat center center fixed;
+  background-size: cover;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.card {
+  background: #333;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.downloadButton {
+  background-color: #0088cc;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.profile {
+  text-align: center;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.name {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.subscribers {
+  margin: 5px 0;
+  color: #bbb;
+}
+
+.description {
+  margin: 10px 0;
+  color: #eee;
+}
+
+.note {
+  margin: 10px 0;
+}
+
+.timer {
+  margin: 10px 0;
+  @apply font-bold;
+  color: #0088cc;
+}
+
+.joinButton {
+  background-color: #0088cc;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 20px;
+  color: #bbb;
 }
