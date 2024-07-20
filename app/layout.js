@@ -1,13 +1,9 @@
+'use client';
 import { useEffect } from 'react';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
-
-export const metadata = {
-  title: 'Insider Vikrant',
-  description: 'Join Now for IPL match pass and World Cup updates',
-};
 
 export default function RootLayout({ children }) {
   useEffect(() => {
